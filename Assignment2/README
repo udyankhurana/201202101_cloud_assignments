@@ -1,0 +1,6 @@
+This is a Mininet Python code that simaulates a Virtual Network with X switches and Y hosts per switch in a ring formation where odd hosts can communaicate with each other but not with even hosts and vice versa.
+
+TO RUN THE CODE:
+sudo python custom_topo.py X Y
+
+To test the code, run pingall on the Mininet CLI.
