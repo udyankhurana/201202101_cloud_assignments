@@ -17,8 +17,8 @@ def customTopo():
     num_switches = int(args[1])
     hosts_per_switch = int(args[2])
     total_hosts = num_switches * hosts_per_switch
-    odd_ip = '10.0.0.'
-    even_ip = '10.0.1.'
+    odd_ip = '11.0.0.'
+    even_ip = '11.0.1.'
     even_ctr = 1
     odd_ctr = 1
 
@@ -55,8 +55,8 @@ def customTopo():
     for i in range(num_switches-1):
         net.addLink(switches[i], switches[i+1], bw=2) # Switch Bandwidth (2 mbps)
         print " [s" + str(i+1) + "<--> s" + str(i+2) + "]"
-    net.addLink(switches[num_switches-1], switches[0], bw=2)
-    print " [s" + str(num_switches) + "<--> s1]"
+#    net.addLink(switches[num_switches-1], switches[0], bw=2)
+#    print " [s" + str(num_switches) + "<--> s1]"
 
     info( '*** Starting the Network and CLI\n' )
     net.start()
